@@ -58,7 +58,7 @@ class UserManager(BaseUserManager):
             **extra_fields
         )
 
-    def create_user(
+    def create(
         self,
         username,
         phone,
@@ -70,8 +70,8 @@ class UserManager(BaseUserManager):
         gender,
         **extra_fields
     ):
-        # extra_fields.setdefault("is_staff", False)
-        # extra_fields.setdefault("is_superuser", False)
+        extra_fields.setdefault("is_staff", False)
+        extra_fields.setdefault("is_superuser", False)
         return self._create_user(
             username,
             phone,

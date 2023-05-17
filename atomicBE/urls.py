@@ -34,7 +34,11 @@ schema_view = get_schema_view(
 )
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("upload_img.urls")),
+    path(r"", include("user.urls")),
+    path(r"", include("upload_img.urls")),
+    path(r"", include("category.urls")),
+    path(r"", include("ticket.urls")),
+    path(r"", include("tour.urls")),
     # this is route swagger
     re_path(
         r"^swagger(?P<format>\.json|\.yaml)$",
