@@ -1,4 +1,5 @@
 /.venv
 /.vscode
+dev.env
 /atomicBE/setting
 debug.log
