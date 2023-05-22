@@ -39,6 +39,7 @@ urlpatterns = [
     path(r"", include("category.urls")),
     path(r"", include("ticket.urls")),
     path(r"", include("tour.urls")),
+    path(r"", include("create_PDFfile.urls")),
     # this is route swagger
     re_path(
         r"^swagger(?P<format>\.json|\.yaml)$",
